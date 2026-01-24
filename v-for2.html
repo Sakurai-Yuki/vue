@@ -19,10 +19,10 @@
                 <th>tel</th>
               </tr>
             </thead>
-            <tr v-for="item in items" :key="item.name">
-              <td>{{ item.name }}</td>
-              <td>{{ item.mail }}</td>
-              <td>{{ item.tel }}</td>
+            <tr v-for="item in items" :key="item.id">
+              <td>{{ item.id }}</td>
+              <td>{{ item.title }}</td>
+              <td>{{ item.subTitle }}</td>
             </tr>
           </table>
         </div>
@@ -37,7 +37,7 @@
           },
           mounted() {
             // バックエンドのエンドポイントを適切なものに変更してください
-            const backendEndpoint = 'http://localhost:30000/notes_from_b';
+            const backendEndpoint = 'http://localhost:30158/notes_from_b';
 
             // AXIOSを使用してデータを取得
             axios.get(backendEndpoint)
